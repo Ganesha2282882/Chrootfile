@@ -1,2 +1,2 @@
 # Chrootfile
-Dockerfiles for chroots. Exists as a specification.
+`Dockerfile`s for `chroots`. Exists as a specification.
