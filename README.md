@@ -14,5 +14,5 @@ Example `Chrootfile`s are in the examples directory.
 
 To run a `Chrootfile`, run:
 ```bash
-`head -n 1 os.cfl | tr -d "#!"` $NAME_OF_CHROOTFILE
+`head -n 1 $NAME_OF_CHROOTFILE | tr -d "#!"` $NAME_OF_CHROOTFILE
 ```
