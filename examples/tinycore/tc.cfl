@@ -1,0 +1,12 @@
+#!/bin/bash
+APP_NAME="TinyCore Linux"
+mkdir root
+cd root
+curl -o tc.tar.gz -L "https://drive.google.com/uc?export=download&id=1Algq4In8WABuVxEVQwhsRbOUdRkL9wj_"
+tar xf tc.tar.gz
+rm tc.tar.gz
+cp /etc/resolv.conf etc/resolv.conf
+cd ..
+tar czf root.tar.gz root
+rm -rf root
+echo $APP_NAME is now built.

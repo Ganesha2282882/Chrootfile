@@ -1,0 +1,12 @@
+#!/bin/bash 
+APP_NAME="Alpine Linux"
+mkdir root
+cd root
+wget https://dl-cdn.alpinelinux.org/alpine/v3.6/releases/x86_64/alpine-minirootfs-3.6.1-x86_64.tar.gz -O alpine.tar.gz
+tar xpf alpine.tar.gz
+rm alpine.tar.gz
+cp /etc/resolv.conf etc/resolv.conf
+cd ..
+tar czf root.tar.gz root
+rm -rf root
+echo $APP_NAME is now built.

@@ -1,0 +1,16 @@
+#!/bin/bash
+APP_NAME="OS"
+mkdir root
+cd root
+mkdir bin etc
+cd bin
+wget https://busybox.net/downloads/binaries/1.26.2-i686/busybox_ASH -O sh
+chmod +x sh
+cd ..
+cd etc
+touch mdev.conf
+cat /etc/resolv.conf > resolv.conf
+cd ../..
+tar -czf root.tar.gz root
+rm -fr root
+echo $APP_NAME is now built.
